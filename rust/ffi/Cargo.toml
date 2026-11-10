@@ -1,0 +1,18 @@
+[package]
+name = "assets-parser-ffi"
+version.workspace = true
+edition.workspace = true
+description = "C ABI wrapper around car-parser for Swift consumers"
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lib]
+name = "car_parser_ffi"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+car-parser = { path = "../car", features = ["image"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }

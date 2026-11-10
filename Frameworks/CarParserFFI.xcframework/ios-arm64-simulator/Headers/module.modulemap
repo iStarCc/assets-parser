@@ -1,0 +1,4 @@
+module CarParserFFI {
+    header "car_parser_ffi.h"
+    export *
+}

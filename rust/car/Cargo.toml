@@ -1,0 +1,25 @@
+[package]
+name = "car-parser"
+version.workspace = true
+edition.workspace = true
+description = "Rust parser for Apple .car asset catalog archives"
+license.workspace = true
+repository.workspace = true
+
+[lib]
+name = "car"
+
+[dependencies]
+bom = { package = "car-parser-bom", path = "../bom" }
+deepmap2 = { package = "car-parser-deepmap2", path = "../deepmap2" }
+
+deku = { workspace = true }
+thiserror = { workspace = true }
+multimap = "0.10"
+lzfse_rust = { workspace = true }
+flate2 = { workspace = true }
+image = { workspace = true, optional = true }
+serde = { workspace = true }
+
+[features]
+image = ["dep:image"]
